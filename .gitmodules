@@ -1,0 +1,3 @@
+[submodule "Permutohedral_attention_module"]
+	path = Permutohedral_attention_module
+	url = https://github.com/SamuelJoutard/Permutohedral_attention_module.git
