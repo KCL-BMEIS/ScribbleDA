@@ -1,0 +1,4 @@
+torchio==0.13.10
+batchgenerators>=0.19.4
+medpy
+torch
