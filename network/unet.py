@@ -1,16 +1,4 @@
-#    Copyright 2019 Division of Medical Image Computing, German Cancer Research Center (DKFZ), Heidelberg, Germany
-#
-#    Licensed under the Apache License, Version 2.0 (the "License");
-#    you may not use this file except in compliance with the License.
-#    You may obtain a copy of the License at
-#
-#        http://www.apache.org/licenses/LICENSE-2.0
-#
-#    Unless required by applicable law or agreed to in writing, software
-#    distributed under the License is distributed on an "AS IS" BASIS,
-#    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-#    See the License for the specific language governing permissions and
-#    limitations under the License.
+#   CODE ADAPTED FROM: https://github.com/MIC-DKFZ/nnUNet/blob/master/nnunet/network_architecture/generic_UNet.py
 
 from copy import deepcopy
 from torch import nn
@@ -107,13 +95,12 @@ class UNet2D5(nn.Module):
         nonlin_kwargs=None,
         weightInitializer=InitWeights_He(1e-2)):
         """
-        basically more flexible than v1, architecture is the same
+        2.5D CNN combining 2D and 3D convolutions to dealwith the low through-plane resolution.
+        The first two stages have 2D convolutions while the others have 3D convolutions. 
 
-        Does this look complicated? Nah bro. Functionality > usability
-
-        This does everything you need, including world peace.
-
-        Questions? -> f.isensee@dkfz.de
+        Architecture inspired by: 
+        Wang,et al: Automatic segmentation of  vestibular  schwannoma  from  t2-weighted  mri  
+        by  deep  spatial  attention  with hardness-weighted loss. MICCAI 2019. 
         """
         super(UNet2D5, self).__init__()
 
