@@ -1,7 +1,7 @@
 # Scribble-based Domain Adaptation via Co-segmentation
 
 Public pytorch implementation for our paper [Scribble-based Domain Adaptation 
-via Co-segmentation], 
+via Co-segmentation](https://link.springer.com/chapter/10.1007%2F978-3-030-59710-8_47), 
 which was accepted for presentation at [MICCAI 2020](https://www.miccai2020.org). 
 
 If you find this code useful for your research, please cite the following paper:
