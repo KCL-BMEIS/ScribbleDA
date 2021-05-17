@@ -4,7 +4,7 @@ import torch
 import numpy as np
 import time
 
-from Permutohedral_attention_module.PAM_cuda.pl import PermutohedralLattice as pl
+from .Permutohedral_attention_module.PAM_cuda.pl import PermutohedralLattice as pl
 
 class CRFLoss(nn.Module):
     def __init__(self,
