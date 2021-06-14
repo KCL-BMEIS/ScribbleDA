@@ -44,7 +44,8 @@ The dataset (images, annotations, scribbles) used for our experiments will be re
 
 ## Running the code
 `train.py` is the main file for training the model.
-```` python3 train.py \
+```` python
+python3 train.py \
 -model_dir ./models/$ALPHA/$BETA/$GAMMA/$WARMUP/ \
 -alpha $ALPHA \
 -beta $BETA \
