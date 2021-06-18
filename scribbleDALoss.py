@@ -1,8 +1,6 @@
 import torch.nn as nn
 import torch.nn.functional as F
 import torch
-import numpy as np
-import time
 
 from .Permutohedral_attention_module.PAM_cuda.pl import PermutohedralLattice as pl
 
@@ -61,7 +59,7 @@ class CRFLoss(nn.Module):
             ones = torch.ones(1, 1, batch_size*nb_voxels, device='cuda')
 
         if self.use_norm:
-            spatial_norm = self.pl(bilateral_coords, ones)
+            spatial_norm = self.pl(features, ones)
             spatial_norm = 1.0 / torch.sqrt(spatial_norm + 1e-20)
         
         if not self.is_da:
